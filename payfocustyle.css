@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins' sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.loader{
+    width: 120px;
+    height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.loader span{
+font-size: 22px;
+text-transform: uppercase;
+margin: auto;
+}
+.ball {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: bounce .5s alternate infinite;
+}
+ .ball:nth-child(2){
+     animation-delay: .16s;
+ }
+ .ball:nth-child(3){
+     animation-delay: .32s;
+ }
+
+ @keyframes bounce {
+     from{
+         transform: scaleX(1.25);
+     }
+     to{
+         transform: translateY(-50px) scaleX(1);
+     }
+ }
+
+
+
+
+
+.container{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+    
+}
+
+form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgb(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+
+}
+ .container form .inputBox{
+     margin-top: 20px;
+ }
+
+ .container form .inputBox span{
+    display:block;
+    color: blue;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+ width: 100%;
+ padding: 10px;
+ border-radius: 10px;
+ color: #444;
+ border: 1px solid #001dab;
+}
+
+.container form .flexBox{
+    display: flex;
+    gap: 15px;
+}
+
+.container form .flexBox .inputBox{
+    flex: 1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background: linear-gradient(45deg, #001dab, #444 );
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s linear;
+    border-radius: 10px;
+}
+ .container form .submit-btn:hover{
+     letter-spacing: 2px;
+     opacity: .8;
+ }
+
+ .container .card-container{
+     margin-bottom: -150px;
+     position: relative;
+     height: 200px;
+     width: 400px;
+ }
+
+ .container .card-container .card-front{
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     top: 0; left: 0;
+    background: linear-gradient(45deg, #001dab, #444 );
+     border-radius: 5px;
+     backface-visibility: hidden;
+     box-shadow: 0 15px 25px rgb(0,0,0,.1);
+     padding: 20px;
+    transition:transform .4s ease-in-out;
+    transform:perspective(1000px) rotateY(0deg);
+
+
+ }
+
+ .container .card-container .card-front .image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+ }
+
+ .container .card-container .card-front .image img{
+     height: 20px;
+ }
+
+ .container .card-container .card-front .card-number-box{
+     padding: 30px 0;
+     font-size: 22px;
+     color: #fff;
+ }
+
+ .container .card-container .card-front .flexbox{
+     display: flex;
+ }
+
+ .container .card-container .card-front .flexbox .card-box:nth-child(1){
+     margin-right: auto;
+ }
+
+ .container .card-container .card-front .flexbox .card-box{
+    font-size: 15px;
+    color: #fff ;
+}
+
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #001dab, #444 );
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgb(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-in-out;
+
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+.container .card-container .back .box span{
+    color: #fff;
+    font-size: 15px;
+}
+ 
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: #333;
+    background: #eee;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 10px;
+    height: 10px;
+}
+
+
+
+
